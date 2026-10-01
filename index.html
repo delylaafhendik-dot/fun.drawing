@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fun Drawing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>🎨 Fun Drawing</h1>
+  <div class="actions">
+    <button id="undo" title="Undo (Ctrl+Z)">↩️ Undo</button>
+    <button id="redo" title="Redo (Ctrl+Y)">↪️ Redo</button>
+    <button id="clear">🧹 Clear</button>
+    <button id="new">📄 New Drawing</button>
+    <button id="save" class="go">💾 Save PNG</button>
+  </div>
+</header>
+<main class="layout">
+  <section class="board">
+    <div class="challenge"><span id="idea">Ready to draw? Press the button!</span><button id="ideaBtn">💡 Give Me an Idea!</button></div>
+    <div class="wrap" id="wrap"><canvas id="cv" width="1000" height="640"></canvas></div>
+  </section>
+  <aside class="panel">
+    <div class="box"><h2>Tools</h2><div class="btns" id="tools"></div></div>
+    <div class="box"><h2>Brush type</h2><div class="btns" id="brushes"></div></div>
+    <div class="box"><h2>Size <b id="sizeV">8</b></h2><input type="range" id="size" min="2" max="60" value="8"></div>
+    <div class="box"><h2>Color</h2>
+      <div class="sw" id="swatches"></div>
+      <label class="row">Pick <input type="color" id="color" value="#ff4d6d"></label>
+      <label class="row">Background <input type="color" id="bg" value="#ffffff"></label>
+    </div>
+    <div class="box"><h2>Shape</h2>
+      <select id="shape"><option value="line">Line</option><option value="rect">Square</option><option value="circle">Circle</option><option value="triangle">Triangle</option><option value="star">Star</option><option value="heart">Heart</option><option value="diamond">Diamond</option></select>
+      <label class="row"><input type="checkbox" id="fillShape" checked> Filled</label>
+    </div>
+    <div class="box"><h2>Text</h2><input type="text" id="text" value="Hello!" maxlength="40"><small>Choose Text, then click the canvas.</small></div>
+    <div class="box"><h2>✨ Fun Tools</h2>
+      <div class="btns" id="fun"></div>
+      <h3>Stickers</h3><div class="btns" id="stickers"></div>
+      <h3>Stamps</h3><div class="btns" id="stamps"></div>
+    </div>
+  </aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
